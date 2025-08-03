@@ -1,0 +1,48 @@
+---
+title: "MPG Predictor App Pitch"
+author: "Your Name"
+date: "August 2025"
+output: ioslides_presentation
+---
+
+## Problem Statement
+
+- Fuel efficiency (MPG) is a key factor for car buyers.
+- Weight and transmission are major predictors of MPG.
+- Goal: Simple tool to estimate MPG based on these factors.
+
+---
+
+## Solution Overview
+
+- Interactive Shiny App.
+- Inputs:
+  - Car Weight (Slider)
+  - Transmission Type (Radio Button)
+- Output:
+  - Predicted MPG in real-time.
+
+---
+
+## Predictive Model Code
+
+```{r}
+data(mtcars)
+summary(lm(mpg ~ wt + am, data = mtcars))
+```
+
+---
+
+## Example Prediction
+
+```{r}
+model <- lm(mpg ~ wt + am, data = mtcars)
+predict(model, newdata = data.frame(wt = 3, am = 1))
+```
+
+---
+
+## Try It Out
+
+- App Link: http://your-shinyapps-link
+- Source Code: https://github.com/your-repo
